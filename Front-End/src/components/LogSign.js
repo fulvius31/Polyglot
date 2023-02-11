@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Signup.css";
 import icon from "./icon.png";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
 import Signup from "../components/Signup.js";
 import Login from "../components/Login.js";
-import { Alert } from "react-bootstrap";
 
 function LogSign(props) {
-  const [key, setKey] = useState(props.active);
   return (
     <div className="row">
       <div className="first-div col-lg-6">
@@ -26,17 +22,8 @@ function LogSign(props) {
         <img className="img-acc" src={icon} alt="icon"></img>
       </div>
       <div className="second-div col-lg-6">
-        <div className="sign-div">
-          <Alert>{props.active}</Alert>
-          <Tabs activeKey={key} fill onSelect={(k) => setKey(k)}>
-            <Tab tabClassName="title-beauty" eventKey="first" title="LOGIN">
-              <Login />
-            </Tab>
-            <Tab tabClassName="title-beauty" eventKey="second" title="SIGNUP">
-              <Signup />
-            </Tab>
-          </Tabs>
-        </div>
+        {props.active === "first" && <Login />}
+        {props.active === "second" && <Signup />}
       </div>
     </div>
   );

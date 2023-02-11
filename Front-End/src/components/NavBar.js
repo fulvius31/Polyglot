@@ -25,12 +25,12 @@ function NavBar() {
             </Button>
             <Button className="btn-nav link">LANGUAGES</Button>
             <Button className="btn-nav link">
-              <NavLink exact to="/Login" activeClassName="active">
+              <NavLink exact to="/Signup" activeClassName="active">
                 CONTACT
               </NavLink>
             </Button>
             <Button className="btn-nav link-sign">
-              <NavLink exact to="/Signup" activeClassName="active">
+              <NavLink exact to="/Login" activeClassName="active">
                 LOGIN/SIGNUP
               </NavLink>
             </Button>

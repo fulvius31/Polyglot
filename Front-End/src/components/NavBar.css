@@ -62,3 +62,8 @@ button:hover {
 .link-add {
   margin-left: 5% !important;
 }
+
+button a {
+  text-decoration: none !important;
+  color: unset !important;
+}
